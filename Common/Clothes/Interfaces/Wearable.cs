@@ -6,7 +6,10 @@ namespace Clothespin2.Common.Clothes {
     public abstract class Wearable : Identifiable, Nameable, Describable, Depictable {
 
         /// <summary>Type of this Wearable</summary>
-        public int Type { get; set; } = 0;
+        public abstract int Type { get; }
+
+        /// <summary>SubType of this Wearable</summary>
+        public int Subtype { get; set; } = 0;
 
         /// <summary>Name of this Wearable</summary>
         public string Name { get; set; } = "";
