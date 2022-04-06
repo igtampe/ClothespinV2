@@ -5,6 +5,8 @@ namespace Clothespin2.Common.Clothes.Items {
     /// <summary>Holds a shirt</summary>
     public class Shirt : Washable, DistinguishableSizable {
 
+        public override int Type => 0;
+
         /// <summary>Distinguisher for the size of this shirt</summary>
         public SizeDistinguisher Distinguisher { get; set; } = SizeDistinguisher.UNIVERSAL;
 

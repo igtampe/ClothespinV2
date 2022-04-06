@@ -3,6 +3,8 @@
 namespace Clothespin2.Common.Clothes.Items {
     /// <summary>Holds a pair of pants</summary>
     public class Pants : Washable, DistinguishableSizable {
+        
+        public override int Type => 3;
 
         /// <summary>Distinguisher of the size of these pants</summary>
         public SizeDistinguisher Distinguisher { get; set; } = SizeDistinguisher.UNIVERSAL;
