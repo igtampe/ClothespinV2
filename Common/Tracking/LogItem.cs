@@ -4,7 +4,7 @@ using Clothespin2.Common.Clothes.Items;
 namespace Clothespin2.Common.Tracking {
 
     /// <summary>A log of something at a specific time</summary>
-    public abstract class LogItem:Identifiable {
+    public class LogItem:Identifiable {
 
         /// <summary>User that logged this logitem</summary>
         public User? Owner { get; set; }
