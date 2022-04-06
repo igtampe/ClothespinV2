@@ -26,7 +26,7 @@ namespace Clothespin2.Common.Clothes {
         /// <summary>Shoes worn on this outfit</summary>
         public Shoes? Shoes { get; set; }
 
-        /// <summary>List of overshirt items worn on this outfit</summary>
+        /// <summary>List of outerwear items worn on this outfit</summary>
         public List<Outerwear> OuterwearLayers { get; set; } = new();
 
         /// <summary>Whether or not this Outfit has been deleted</summary>

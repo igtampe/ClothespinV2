@@ -7,13 +7,13 @@ namespace Clothespin2.Common.Clothes.Items {
 
         public override int Type => 2;
 
-        /// <summary>Distinguisher of the size of this overshirt item</summary>
+        /// <summary>Distinguisher of the size of this Outerwear item</summary>
         public SizeDistinguisher Distinguisher { get; set; }
 
-        /// <summary>Size of this overshirt item (probably a letter!)</summary>
+        /// <summary>Size of this Outerwear item (probably a letter!)</summary>
         public string Size { get; set; } = "";
 
-        /// <summary>Region of the size of this overshirt</summary>
+        /// <summary>Region of the size of this Outerwear</summary>
         public string Region { get; set; } = "";
 
     }

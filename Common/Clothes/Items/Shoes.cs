@@ -13,7 +13,7 @@ namespace Clothespin2.Common.Clothes.Items {
         /// <summary>Size of this Shoe</summary>
         public string Size { get; set; } = "";
 
-        /// <summary>Region of the size of this overshirt</summary>
+        /// <summary>Region of the size of these shoes</summary>
         public string Region { get; set; } = "";
 
     }
