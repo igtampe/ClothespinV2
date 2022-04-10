@@ -50,5 +50,25 @@ namespace Clothespin2.Common.Clothes {
             //I don't want to return MAS if it's anyhting besides dirty (Like washed) because while something might be washed, others may still be dirty.
             
         }
+
+        /// <summary>Check to determine if this outfit's wearable's match another outfit's wearables</summary>
+        /// <param name="O"></param>
+        /// <returns></returns>
+        public bool SameWearables(Outfit O) => WearableMatch(Shirt, O.Shirt) && WearableMatch(Pants, O.Pants) &&
+                   WearableMatch(Dress, O.Dress) && WearableMatch(Shoes, O.Shoes) &&
+                   OuterwearLayersMatch(OuterwearLayers,O.OuterwearLayers);
+
+        /// <summary>Returns true if both wearables are null, or if both of them are equal. This method could actually be extended to any identifiable</summary>
+        /// <param name="W1"></param>
+        /// <param name="W2"></param>
+        /// <returns></returns>
+        private static bool WearableMatch(Wearable? W1, Wearable? W2) => (W1 is null && W2 is null) || W1?.Equals(W2) == true;
+        
+        /// <summary>Ensures these two lists are the same</summary>
+        /// <param name="L1"></param>
+        /// <param name="L2"></param>
+        /// <returns></returns>
+        private static bool OuterwearLayersMatch(List<Outerwear> L1, List<Outerwear> L2) => L1.Count == L2.Count && L1.All(A => L2.Contains(A));
+
     }
 }
