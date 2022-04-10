@@ -17,10 +17,7 @@ namespace Clothespin2.Data.Migrations
                     Data = table.Column<byte[]>(type: "bytea", nullable: true),
                     Type = table.Column<string>(type: "text", nullable: true)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Image", x => x.ID);
-                });
+                constraints: table => table.PrimaryKey("PK_Image", x => x.ID));
 
             migrationBuilder.CreateTable(
                 name: "User",
@@ -30,10 +27,7 @@ namespace Clothespin2.Data.Migrations
                     Password = table.Column<string>(type: "text", nullable: false),
                     ImageURL = table.Column<string>(type: "text", nullable: false)
                 },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_User", x => x.Username);
-                });
+                constraints: table => table.PrimaryKey("PK_User", x => x.Username));
 
             migrationBuilder.CreateTable(
                 name: "Wearable",
